@@ -4,17 +4,15 @@
 body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    margin-left: 6em;
-    margin-top: 2.5em;
+    color: white; 
+    margin: 3.5em 6em;
     font-family: "Inter", serif;
     font-weight: 300;
 }
 
 header img {
-    width: 8%;
+    width: 10%;
 }
 
 main h1 {
@@ -50,20 +48,20 @@ form button {
 }
 
 input[type="checkbox"] { 
-    -webkit-appearance: none; 
+    appearance: none;
     width: 20px; 
     height: 20px; 
     background: transparent;  
-    border: 1px solid #ccc; 
     border-radius: 3px; 
     cursor: pointer; 
     display: inline-block;
     margin-right: 1em;
     border: solid 2px white;
+    
 }
 
 input[type="checkbox"]:checked { 
-    background-color: #662575;
+    appearance: auto;
 }
 
 footer input, span, button{
@@ -86,3 +84,51 @@ form span {
     font-family: "Outfit", sans-serif;
     cursor: pointer;
 }
+
+a {
+    text-decoration: none;
+    color: #0B113B;
+}
+
+section {
+    text-align: center;
+    margin: 0 30em;
+}
+
+
+#domanda {
+    font-size: 45px;
+    padding: 0 12em;
+    text-align: center;
+    margin-top: 3em;
+}
+
+section div{
+    display: inline-block;
+    margin: 1em 1.5em;
+}
+
+section div button {
+    padding: 1.5em 7em;
+    border-radius: 3em;
+    background-color: rgba(255, 255, 255, 0.185);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+section div button:hover {
+    background-image: linear-gradient(#D20094, #900080);
+    
+}
+
+#question {
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+.footerCentrale {
+    text-align: center;
+    margin-top: 18em;
+}
+
