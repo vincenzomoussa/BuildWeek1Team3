@@ -145,6 +145,7 @@ const questions = [
     startTimer();
   }
   
+  
   // Funzione per gestire la selezione della risposta
   function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
