@@ -92,7 +92,6 @@ a {
 
 section {
     text-align: center;
-    margin: 0 30em;
 }
 
 
@@ -104,12 +103,13 @@ section {
     margin-top: 3em;
 }
 
-section div{
+section {
     display: inline-block;
-    margin: 1em 1.5em;
+    
+    
 }
 
-section div button {
+section button {
     padding: 1.5em 7em;
     border-radius: 3em;
     background-color: rgba(255, 255, 255, 0.185);
@@ -120,7 +120,7 @@ section div button {
     cursor: pointer;
 }
 
-section div button:hover {
+section  button:hover {
     background-image: linear-gradient(#D20094, #900080);
     
 }
