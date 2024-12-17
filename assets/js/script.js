@@ -98,6 +98,7 @@ const questions = [
 let currentQuestionIndex = 0;
 let time = 60;
 let score = 0;
+let noScore = 0;
 let timerInterval;
 
 // Array per tenere traccia delle domande visualizzate
@@ -171,7 +172,10 @@ function loadQuestion() {
     updateQuestionCount();
     resetTimer();
     startTimer();
+    
+    
 }
+
 
 
 // Funzione per gestire la selezione della risposta
@@ -179,9 +183,18 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
     if (selectedAnswer === correctAnswer) {
         score++;
+    }else if (selectAnswer !== correctAnswer) {
+        noScore++;
     }
     nextQuestion();
+    
 }
+
+function result() {
+    let result = document.querySelector(".score")
+    result.innerHTML = score + "/10"
+}
+
 
 // Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
@@ -190,7 +203,8 @@ function nextQuestion() {
       loadQuestion();
     } else if (currentQuestionIndex === 10){
       window.location.href = "./index3.html"
-    }
+      
+    } 
   }
 
   // Funzione per avviare il timer
