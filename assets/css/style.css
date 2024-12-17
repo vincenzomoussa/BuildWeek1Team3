@@ -93,6 +93,7 @@ a {
 /* PAGINA 2 */
 
 section {
+    
     text-align: center;
 }
 
@@ -153,6 +154,19 @@ section  button:hover {
     font-weight: bold;
     color: #d20094;
 
+}
+
+
+.timer {
+    font-size: 12px;
+    text-align: right;
+}
+
+#time {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 600
 }
 
 /* PAGINA 3 */
