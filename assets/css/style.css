@@ -97,6 +97,7 @@ section {
 
 
 #domanda {
+    font-family: "Outfit", sans-serif;
     font-size: 45px;
     padding: 0 12em;
     text-align: center;
@@ -113,6 +114,8 @@ section div button {
     border-radius: 3em;
     background-color: rgba(255, 255, 255, 0.185);
     border: 1px solid white;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
     color: white;
     cursor: pointer;
 }
@@ -129,6 +132,13 @@ section div button:hover {
 
 .footerCentrale {
     text-align: center;
-    margin-top: 18em;
+    margin-top: 8em;
 }
 
+
+.contatore {
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    color: #d20094;
+
+}
