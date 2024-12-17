@@ -168,6 +168,8 @@ const questions = [
         button.onclick = () => selectAnswer(allAnswers[index], currentQuestion.correct_answer, currentQuestion.type);
       } 
     });
+
+
     
     // Aggiorno il contatore delle domande e avvio il timer
     updateQuestionCount();
@@ -190,9 +192,12 @@ const questions = [
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
       loadQuestion();
-    } 
+    } else if (currentQuestionIndex === 10){
+      window.location.href = "./index3.html"
+
+    }
   }
-  
+
   // Funzione per avviare il timer
   function startTimer() {
     timerInterval = setInterval(() => {
