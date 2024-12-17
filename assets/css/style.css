@@ -259,18 +259,18 @@ path:hover {
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 1.2em;
-    border-bottom: solid #D20094;
-    padding-left: 2em;
-    width: 50%;
-    position: relative;
-    left: 16em;
-    width: 67%;
+    font-size: 1.2em;    
+    padding-left: 22em;
+    width: 100%;
     }
 
 #form4 button {
-    display: block;
-    margin-top: 4em;
+    display: block;    
     margin: auto;
-    margin-top: 4em;
+    margin-top: 4em;    
+}
+form div {
+    border-top: solid #D20094;
+    width: 58%;
+    margin: auto;
 }
