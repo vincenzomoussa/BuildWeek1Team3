@@ -238,7 +238,13 @@ h2 {
 div svg {
     padding-left: 1em;
     background-color: transparent;
+    
 }
+path:hover {
+    cursor: pointer;
+    fill: #00FFFF;
+}
+
 #footer4 {
     text-align: center;
     margin-top: 5em;
@@ -247,8 +253,7 @@ div svg {
     margin-top: 6em;
 }
 #form4 input {
-    display: block;
-    width: 68%;
+    display: block;    
     height: 3em;
     border: none;
     background-color: transparent;
@@ -256,7 +261,10 @@ div svg {
     font-size: 1.2em;
     border-bottom: solid #D20094;
     padding-left: 2em;
-    margin-left: 20em;
+    width: 50%;
+    position: relative;
+    left: 16em;
+    width: 67%;
     }
 
 #form4 button {
