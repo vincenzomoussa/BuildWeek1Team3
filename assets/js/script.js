@@ -98,34 +98,36 @@ const questions = [
   },
 ];
 
+let usedIndexes = [];
 function randomDom() {
-  for (let index = 0; index < questions.length; index++) {
+
+  
+  
     const randomIndex = Math.floor(Math.random() * questions.length);
     let domande = document.querySelector("#domanda h3");
+    let domandaSelezionata = questions[randomIndex];
     domande.innerHTML = questions[randomIndex].question;
 
     let risposta = document.querySelector(".risposta")
-    risposta.innerHTML = questions[randomIndex].correct_answer;
+    risposta.innerHTML = domandaSelezionata.correct_answer;
 
     let rispostaSbagliata = document.querySelectorAll("button.risposta1")
     rispostaSbagliata.forEach(element => {
-        element.innerHTML = questions[randomIndex].incorrect_answers[0]
+        element.innerHTML = domandaSelezionata.incorrect_answers[0]
 
         let rispostaSbagliata = document.querySelectorAll("button.risposta2")
     rispostaSbagliata.forEach(element => {
-        element.innerHTML = questions[randomIndex].incorrect_answers[1]
+        element.innerHTML = domandaSelezionata.incorrect_answers[1]
 
         let rispostaSbagliata = document.querySelectorAll("button.risposta3")
     rispostaSbagliata.forEach(element => {
-        element.innerHTML = questions[randomIndex].incorrect_answers[2]
-        
+        element.innerHTML = domandaSelezionata.incorrect_answers[2]
+
+
+         questions.splice(randomIndex, 1);
 })})});
 
-  //for (let index = 0; index < questions[randomIndex].incorrect_answers.length; index++) {
-    //rispostaSbagliata.innerHTML = questions[randomIndex].incorrect_answers[index]
-  //}
-  
 }
-  } randomDom()
+  randomDom()
 
 
