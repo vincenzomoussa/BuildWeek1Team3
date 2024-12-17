@@ -153,10 +153,59 @@ section  button:hover {
 
 }
 
+.bottone {
+    background-color: rgba(255, 0, 0, 0);
+    padding: 0.8em 3em;
+    border: 1px solid white;
+    border-radius: 0%;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 3em;
+}
+
+
+.bottone a  {
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
 
 
 
 
+div p {
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+}
+
+div h3 {
+    margin-top: 2em;
+    font-family: "Outfit", sans-serif;
+    font-size: 50px; 
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+}
+
+main section div {
+    display: inline-block;
+    margin: 0 3em;
+}
+
+main section div h4 {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+main section div p {
+    font-size: 20px;
+}
 
 
 
