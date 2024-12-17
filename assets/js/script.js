@@ -104,10 +104,14 @@ const questions = [
   let usedQuestions = [];
   
   // Seleziono gli elementi dal DOM
+  const section = document.querySelector("section");
   const questionContainer = document.querySelector('#domanda');
-  const options = document.querySelectorAll('.risposta, .risposta1');
+  const div1 = document.querySelector("#div1");
+  const div2 = document.querySelector("#div2");
+  // const options = document.querySelectorAll('.risposta, .risposta1');
   const timerEl = document.querySelector('#time');
   const questionCountEl = document.querySelector('#question');
+  const options = [];
   
   // Funzione per caricare una domanda casuale che non sia già stata usata
   function loadQuestion() {
@@ -131,7 +135,27 @@ const questions = [
     // Imposto le opzioni di risposta
     const allAnswers = [...currentQuestion.incorrect_answers];
     allAnswers.splice(Math.floor(Math.random() * (allAnswers.length + 1)), 0, currentQuestion.correct_answer);
-  
+    
+    if(allAnswers.length === 2) {
+        let btn1 = document.createElement("button");
+        let btn2 = document.createElement("button");
+        div1.appendChild(btn1);
+        div1.appendChild(btn2);
+        section.appendChild(div1);
+        options.push(btn1, btn2);
+    } else if (allAnswers.length === 4) {
+        let btn1 = document.createElement("button");
+        let btn2 = document.createElement("button");
+        let btn3 = document.createElement("button");
+        let btn4 = document.createElement("button");
+        div1.appendChild(btn1);
+        div1.appendChild(btn2);
+        div2.appendChild(btn3);
+        div2.appendChild(btn4);
+        section.appendChild(div1, div2);
+        options.push(btn1, btn2, btn3, btn4);
+    }
+    
     options.forEach((button, index) => {
       if (allAnswers[index]) {
         button.textContent = allAnswers[index];
@@ -200,3 +224,6 @@ const questions = [
   
 
 
+function removeChild(params) {
+    
+}
