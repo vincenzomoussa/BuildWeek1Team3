@@ -30,8 +30,7 @@ main h3{
     margin-bottom: 0;
 }
 
-p{
-    
+p{    
     margin-top: 0.3em;
     margin-bottom: 2.5em;
 }
@@ -152,4 +151,33 @@ section  button:hover {
     font-weight: bold;
     color: #d20094;
 
+}
+
+main {
+    margin-top: 8em;
+}
+
+#title4 {
+    width: 100%;
+    text-align: center;
+} 
+h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 4em;
+
+}
+.page4parag {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+#stars {
+    text-align: center;
+}
+div svg {
+    padding-left: 0.8em;
+}
+#footer4 {
+    text-align: center;
+    margin-top: 5em;
 }
