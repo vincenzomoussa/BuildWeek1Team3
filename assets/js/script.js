@@ -104,7 +104,7 @@ let timerInterval;
 let usedQuestions = [];
 
 // Seleziono gli elementi dal DOM
-const questionContainer = document.querySelector('#domanda , h3')
+const questionContainer = document.querySelector('#domanda');
 const options = document.querySelectorAll('.risposta, .risposta1');
 const timerEl = document.querySelector('#time');
 const questionCountEl = document.querySelector('#question');
