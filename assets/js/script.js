@@ -105,15 +105,24 @@ for (let index = 0; index < questions.length; index++) {
     domande.innerHTML = questions[randomIndex].question;
     let risposta = document.querySelector(".risposta")
     risposta.innerHTML = questions[randomIndex].correct_answer;
+
     let rispostaSbagliata = document.querySelectorAll("button.risposta1")
     rispostaSbagliata.forEach(element => {
-        element.innerHTML = questions[randomIndex].incorrect_answers
-        
-    });
+        element.innerHTML = questions[randomIndex].incorrect_answers[0]
 
-  for (let index = 0; index < questions[randomIndex].incorrect_answers.length; index++) {
-    rispostaSbagliata.innerHTML = questions[randomIndex].incorrect_answers[index]
-  }
+        let rispostaSbagliata = document.querySelectorAll("button.risposta2")
+    rispostaSbagliata.forEach(element => {
+        element.innerHTML = questions[randomIndex].incorrect_answers[1]
+
+        let rispostaSbagliata = document.querySelectorAll("button.risposta3")
+    rispostaSbagliata.forEach(element => {
+        element.innerHTML = questions[randomIndex].incorrect_answers[2]
+        
+})})});
+
+  //for (let index = 0; index < questions[randomIndex].incorrect_answers.length; index++) {
+    //rispostaSbagliata.innerHTML = questions[randomIndex].incorrect_answers[index]
+  //}
   
 }
   } randomDom()
