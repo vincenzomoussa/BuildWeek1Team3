@@ -191,8 +191,8 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
 }
 
 function result() {
-    let result = document.querySelector(".score")
-    result.innerHTML = score + "/10"
+    window.location.href = "./index3.html"
+
 }
 
 
@@ -202,8 +202,7 @@ function nextQuestion() {
     if (currentQuestionIndex < 10) {
       loadQuestion();
     } else if (currentQuestionIndex === 10){
-      window.location.href = "./index3.html"
-      
+        result()
     } 
   }
 
