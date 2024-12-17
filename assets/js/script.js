@@ -183,7 +183,7 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
     nextQuestion();
 }
 
-// Funzione per passare alla domanda successiva
+// Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
