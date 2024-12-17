@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* PAGINA 1 */
 
 body {
     background-image: url(../img/bg.jpg);
@@ -89,6 +90,8 @@ a {
     color: #0B113B;
 }
 
+/* PAGINA 2 */
+
 section {
     text-align: center;
 }
@@ -153,6 +156,9 @@ section  button:hover {
 
 }
 
+/* PAGINA 3 */
+
+
 .bottone {
     background-color: rgba(255, 0, 0, 0);
     padding: 0.8em 3em;
@@ -207,7 +213,7 @@ main section div p {
     font-size: 20px;
 }
 
-
+/* PAGINA 4 */
 
 #main4 {
     margin-top: 8em;
