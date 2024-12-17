@@ -131,6 +131,12 @@ const questions = [
     
     // Imposto il testo della domanda casuale
     questionContainer.textContent = currentQuestion.question;
+
+  // Rimuovo i bottoni precedenti
+    div1.innerHTML = ''; 
+    div2.innerHTML = '';
+    options.length = 0;
+
     
     // Imposto le opzioni di risposta
     const allAnswers = [...currentQuestion.incorrect_answers];
