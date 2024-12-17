@@ -132,6 +132,11 @@ function loadQuestion() {
     // Imposto il testo della domanda casuale
     questionContainer.textContent = currentQuestion.question;
 
+  // Rimuovo i bottoni precedenti
+    div1.innerHTML = ''; 
+    div2.innerHTML = '';
+    options.length = 0;
+
     // Imposto le opzioni di risposta
     const allAnswers = [...currentQuestion.incorrect_answers];
     allAnswers.splice(Math.floor(Math.random() * (allAnswers.length + 1)), 0, currentQuestion.correct_answer);
