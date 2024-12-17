@@ -100,7 +100,6 @@ const questions = [
 
   function randomDom() {
 for (let index = 0; index < questions.length; index++) {
-    const element = questions[index].question;
     const randomIndex = Math.floor(Math.random() * questions.length);
     let domande = document.querySelector("#domanda h3");
   domande.innerHTML = questions[randomIndex].question;
