@@ -103,6 +103,12 @@ for (let index = 0; index < questions.length; index++) {
     const randomIndex = Math.floor(Math.random() * questions.length);
     let domande = document.querySelector("#domanda h3");
   domande.innerHTML = questions[randomIndex].question;
+  let risposta = document.querySelector(".risposta")
+  risposta.innerHTML = questions[randomIndex].correct_answer;
+  let rispostaSbagliata = document.querySelector(".risposta1")
+  rispostaSbagliata.innerHTML = questions[randomIndex].incorrect_answers
+
+
 }
   } randomDom()
 
