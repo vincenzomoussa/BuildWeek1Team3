@@ -97,19 +97,24 @@ section {
 
 #domanda {
     font-family: "Outfit", sans-serif;
-    font-size: 45px;
-    padding: 0 12em;
+    font-size: 45px;    
     text-align: center;
     margin-top: 3em;
+    width: 100%;
+    margin: 3em auto;
 }
 
 section {
-    display: inline-block;
-    
-    
+    display: inline-block;   
+    margin: auto;
+    width: 100%;
+}
+section div {
+    padding-bottom: 2em;    
 }
 
 section button {
+    margin-right: 2em;
     padding: 1.5em 7em;
     border-radius: 3em;
     background-color: rgba(255, 255, 255, 0.185);
