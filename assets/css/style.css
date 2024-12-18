@@ -131,8 +131,7 @@ section button {
 }
 
 section  button:hover {
-    background-image: linear-gradient(#D20094, #900080);
-    
+    background-image: linear-gradient(#D20094, #900080);    
 }
 
 #question {
@@ -150,7 +149,6 @@ section  button:hover {
     letter-spacing: 0.2em;
     font-weight: bold;
     color: #d20094;
-
 }
 
 
