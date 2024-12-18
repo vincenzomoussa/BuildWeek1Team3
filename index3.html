@@ -19,6 +19,7 @@
         <section>
             <div>
                 <h4> Correct</h4>
+                <p class="percentuale"></p>
                 <span class="score"></span><span> questions </span>
             </div>
             <div>
@@ -31,6 +32,7 @@
             </div>  
             <div>
                 <h4> Wrong </h4>
+                <p class="percentuale1"></p>
                 <span class="noScore"></span><span> questions </span>
             </div>
     
@@ -52,6 +54,12 @@
         result1.innerHTML = `${score1}/10`
         let result2 = document.querySelector(".noScore")
         result2.innerHTML = `${noScore1}/10`
+        let resulPerc = localStorage.getItem("percentualeEsatte");
+        let resultWrongPerc = localStorage.getItem("percentualeErrate");
+        let resultPerc1 = document.querySelector(".percentuale")
+        resultPerc1.innerHTML = `${resulPerc}%`
+        let resultWrongPerc1 = document.querySelector(".percentuale1")
+        resultWrongPerc1.innerHTML = `${resultWrongPerc}%`
 
       </script>                       
 

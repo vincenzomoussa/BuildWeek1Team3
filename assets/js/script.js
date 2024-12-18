@@ -190,14 +190,6 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
 
 }
 
-//Funzione per gestire lo score nella pagina dei risultati
-function result() {
-    localStorage.setItem("score", score);
-    localStorage.setItem("noScore", noScore);
-    window.location.href = "./index3.html"
-
-}
-
 // Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
     currentQuestionIndex++;
@@ -266,13 +258,15 @@ stars.forEach((star, index1) => {
     });
 });
 
-
+//Calcolo del risultato in prcentuale
 const risposteEsatte = parseInt(localStorage.getItem("score"))
 const risposteErrate = parseInt(localStorage.getItem("noScore"))
 let totale = risposteEsatte + risposteErrate;
 let percentualeTotale = function() {
     const percentualeEsatte = (risposteEsatte / totale) * 100;
     const percentualeErrate = (risposteErrate / totale) * 100;
+    localStorage.setItem("percentualeEsatte",percentualeEsatte)
+    localStorage.setItem("percentualeErrate",percentualeErrate)
 
 const riepilogo = {
     scoreRisposte: totale,
@@ -283,6 +277,15 @@ const riepilogo = {
 }
     return riepilogo 
 };
+
+//Funzione per gestire lo score nella pagina dei risultati
+function result() {
+    localStorage.setItem("score", score);
+    localStorage.setItem("noScore", noScore);
+  
+    window.location.href = "./index3.html"
+
+}
 
 const riepilogo = percentualeTotale(totale);
 
