@@ -114,7 +114,7 @@ const timerEl = document.querySelector('#time');
 const questionCountEl = document.querySelector('#question');
 const options = [];
 
-
+//Funzione per far accettare obbligatoriamente Termini e Condizioni
 function page2() {
 
     const checkbox = document.querySelector("#check")
@@ -132,6 +132,31 @@ function page2() {
 if(document.location.pathname === "/index.html") {
     page2()
 }
+//Funzione per il bottone di index3 
+function page4() {
+    const button2 = document.querySelector("#page4")
+    button2.addEventListener('click', (event) => {
+        event.preventDefault()
+        window.location.href = "./index4.html";
+    }
+)}
+
+if(document.location.pathname === "/index3.html") {
+        page4()
+    }
+//Funzione per il bottone di index4
+
+function pageEpicode() {
+    const button3 = document.querySelector("#pageEpicode")
+    button3.addEventListener('click', (event) => {
+        event.preventDefault()
+        window.location.href = "https://epicode.com/it/?utm_source=adwords&utm_campaign=Brand&utm_adgroup=brandphrase&utm_term=epicode&utm_medium=ppc&hsa_acc=1246633295&hsa_cam=11897141170&hsa_grp=115607542316&hsa_ad=639941754622&hsa_src=g&hsa_tgt=kwd-1083842420783&hsa_kw=epicode&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiA34S7BhAtEiwACZzv4UfJd98I-u7uRZliuXsVMj--n4Cyblftux0gS-riLEmufJutDWyTehoCc6IQAvD_BwE";
+    }
+)}
+
+if(document.location.pathname === "/index4.html") {
+        pageEpicode()
+    }
 
 
 
