@@ -244,16 +244,19 @@ h2 {
     margin-bottom: 1.5em;
 }
 
-#stars {
+.stars {
     text-align: center;
 }
 div svg {
     padding-left: 1em;
-    background-color: transparent;
-    
+    background-color: transparent;    
 }
-path:hover {
+.stars svg path {
     cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+path.active {
     fill: #00FFFF;
 }
 

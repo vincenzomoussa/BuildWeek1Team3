@@ -133,8 +133,8 @@ function loadQuestion() {
     // Imposto il testo della domanda casuale
     questionContainer.textContent = currentQuestion.question;
 
-  // Rimuovo i bottoni precedenti
-    div1.innerHTML = ''; 
+    // Rimuovo i bottoni precedenti
+    div1.innerHTML = '';
     div2.innerHTML = '';
     options.length = 0;
 
@@ -172,8 +172,8 @@ function loadQuestion() {
     updateQuestionCount();
     resetTimer();
     startTimer();
-    
-    
+
+
 }
 
 
@@ -183,11 +183,11 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
     if (selectedAnswer === correctAnswer) {
         score++;
-    }else if (selectAnswer !== correctAnswer) {
+    } else if (selectAnswer !== correctAnswer) {
         noScore++;
     }
     nextQuestion();
-    
+
 }
 
 function result() {
@@ -201,16 +201,16 @@ function result() {
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
-      loadQuestion();
-    } else{
-        result()
-    } 
-  }
-
-  // Funzione per avviare il timer
-  function startTimer() {
         loadQuestion();
+    } else {
+        result()
     }
+}
+
+// Funzione per avviare il timer
+function startTimer() {
+    loadQuestion();
+}
 // Funzione per avviare il timer
 function startTimer() {
 
@@ -246,3 +246,19 @@ function updateQuestionCount() {
 
 // Carica la prima domanda all'avvio
 loadQuestion();
+
+
+
+
+//rating index4
+
+const stars = document.querySelectorAll(".stars svg path");
+
+stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+        stars.forEach((star, index2) => {
+            index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+        })
+    })
+})
+
