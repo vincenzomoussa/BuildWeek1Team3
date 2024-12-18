@@ -219,6 +219,11 @@ main section div h4 {
     font-weight: 400;
 }
 
+#graficoTorta {
+    position: relative;
+    margin: auto;
+}
+
 /* PAGINA 4 */
 
 #main4 {

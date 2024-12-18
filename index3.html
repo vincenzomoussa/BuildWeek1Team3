@@ -22,8 +22,13 @@
                 <span class="score"></span><span> questions </span>
             </div>
             <div>
-    
-            </div>
+                <canvas id="graficoTorta"></canvas>
+                <div id="esitoGraficoTorta">
+                    <p id="primaFrase"></p>
+                    <p id="secondaFrase"></p>
+                    <p id="terzaFrase"></p>
+                </div>
+            </div>  
             <div>
                 <h4> Wrong </h4>
                 <span class="noScore"></span><span> questions </span>
@@ -38,6 +43,7 @@
 
     </main>
      <script src="./assets/js/script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script>
         let score1 = localStorage.getItem("score");
         let noScore1 = localStorage.getItem("noScore");

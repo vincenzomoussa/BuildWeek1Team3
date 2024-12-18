@@ -263,4 +263,43 @@ stars.forEach((star, index1) => {
     })
 })
 // Carica la prima domanda all'avvio
-loadQuestion();
+const risposteEsatte = parseInt(localStorage.getItem("score"))
+const risposteErrate = parseInt(localStorage.getItem("noScore"))
+let totale = risposteEsatte + risposteErrate;
+let percentualeTotale = function() {
+    const percentualeEsatte = (risposteEsatte / totale) * 100;
+    const percentualeErrate = (risposteErrate / totale) * 100;
+
+const riepilogo = {
+    scoreRisposte: totale,
+    esatte: risposteEsatte,
+    errate: risposteErrate,
+    percentualeEsatte: percentualeEsatte.toFixed(1),
+    percentualeErrate: percentualeErrate.toFixed(1)
+}
+    return riepilogo 
+};
+
+const riepilogo = percentualeTotale(totale);
+
+const ctx = document.getElementById("graficoTorta");
+const graficoCiambella = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            label: 'answers',
+            data: [riepilogo.percentualeErrate, riepilogo.percentualeEsatte],
+            borderWidth: 0,
+            backgroundColor: ["#C2128D", "#00FFFF"]
+        }]
+    },
+    options: {
+        cutout: '70%',
+    }
+});
+
+//Mostro il grafico in console
+console.log("Summary delle risposte:");
+console.log(`Totale risposte: ${riepilogo.scoreRisposte}`);
+console.log(`Corrette: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
+console.log(`Sbagliate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
