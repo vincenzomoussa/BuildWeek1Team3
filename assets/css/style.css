@@ -110,9 +110,10 @@ section {
     margin: auto;
     width: 100%;
     text-align: center;
+    height: 20em;
 }
 section div {
-    padding-bottom: 2em;    
+    margin-top: 2em;    
 }
 
 section button {
