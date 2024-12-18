@@ -260,6 +260,9 @@ div svg {
 path.active {
     fill: #00FFFF;
 }
+path.hover {
+    fill: #00FFFF;
+}
 
 #footer4 {
     text-align: center;
