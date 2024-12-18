@@ -155,7 +155,8 @@ section  button:hover {
 
 .timer {
     font-size: 12px;
-    text-align: right;
+    float: right;
+    text-align: center;
 }
 
 #time {
