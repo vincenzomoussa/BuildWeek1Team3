@@ -191,17 +191,18 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
 }
 
 function result() {
+    localStorage.setItem("score", score);
+    localStorage.setItem("noScore", noScore);
     window.location.href = "./index3.html"
 
 }
-
 
 // Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
       loadQuestion();
-    } else if (currentQuestionIndex === 10){
+    } else{
         result()
     } 
   }
