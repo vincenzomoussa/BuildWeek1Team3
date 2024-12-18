@@ -363,10 +363,6 @@ console.log(`Totale domande: ${riepilogo.scoreRisposte}`);
 console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
 console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
 
-}
-//Mostro il grafico in console
-
-//Mostro il risultato all'interno del grafico a torta
 
 if(riepilogo.percentualeEsatte >= 60) {
     document.getElementById("primaFrase").innerText = "Congratulations!";
@@ -379,3 +375,9 @@ if(riepilogo.percentualeEsatte >= 60) {
     document.getElementById("terzaFrase").innerText = "You can contact your teacher and ask him how to try this again.";
     document.getElementById("quartaFrase").innerText = "ps: don't worry though! It can only get better from here!";
 };
+}
+//Mostro il grafico in console
+
+//Mostro il risultato all'interno del grafico a torta
+
+
