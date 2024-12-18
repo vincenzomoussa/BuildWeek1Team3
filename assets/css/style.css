@@ -208,7 +208,8 @@ div h3 {
 
 main section div {
     display: inline-block;
-    margin: 0 3em;
+    margin: auto;
+    width: 20%;
 }
 
 main section div h4 {
