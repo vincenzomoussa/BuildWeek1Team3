@@ -282,8 +282,8 @@ const riepilogo = {
 
 const riepilogo = percentualeTotale(totale);
 
-const ctx = document.getElementById("graficoTorta");
-const graficoCiambella = new Chart(ctx, {
+const ctx = document.querySelector("#graficoTorta");
+let graficoCiambella = new Chart(ctx, {
     type: 'doughnut',
     data: {
         datasets: [{
@@ -303,3 +303,4 @@ console.log("Summary delle risposte:");
 console.log(`Totale risposte: ${riepilogo.scoreRisposte}`);
 console.log(`Corrette: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
 console.log(`Sbagliate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
+
