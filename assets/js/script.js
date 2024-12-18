@@ -114,6 +114,29 @@ const timerEl = document.querySelector('#time');
 const questionCountEl = document.querySelector('#question');
 const options = [];
 
+
+function page2() {
+
+    const checkbox = document.querySelector("#check")
+    const button = document.querySelector("#page2")
+
+    button.addEventListener('click', (event) => {
+        if (!checkbox.checked) {
+           alert('Devi accettare Termini e Condizioni');
+        } else {
+            event.preventDefault()
+            window.location.href = "./index2.html";
+        }  
+    });
+}
+if(document.location.pathname === "/index.html") {
+    page2()
+}
+
+
+
+
+
 // Funzione per caricare una domanda casuale che non sia già stata usata
 function loadQuestion() {
     if (usedQuestions.length === questions.length) {      //se le due lunghezze coincidono tutte le domande sono state caricate
