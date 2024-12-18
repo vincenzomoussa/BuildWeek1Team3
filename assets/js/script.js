@@ -246,7 +246,7 @@ function updateQuestionCount() {
 
 
 // Carica la prima domanda all'avvio
-loadQuestion();
+
 
 
 
@@ -262,4 +262,5 @@ stars.forEach((star, index1) => {
         })
     })
 })
-
+// Carica la prima domanda all'avvio
+loadQuestion();
