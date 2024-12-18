@@ -303,8 +303,8 @@ let graficoCiambella = new Chart(ctx, {
 });
 
 //Mostro il grafico in console
-console.log("Summary delle risposte:");
-console.log(`Totale risposte: ${riepilogo.scoreRisposte}`);
-console.log(`Corrette: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
-console.log(`Sbagliate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
+console.log("Ecco il risultato del tuo test:");
+console.log(`Totale domande: ${riepilogo.scoreRisposte}`);
+console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
+console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
 
