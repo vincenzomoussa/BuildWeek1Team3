@@ -235,6 +235,10 @@ function resetTimer() {
 function updateQuestionCount() {
     questionCountEl.textContent = "QUESTION " + (currentQuestionIndex + 1);
 }
+//genero le domande casuali
+if(document.location.pathname === "/index2.html") {
+loadQuestion();
+}
 
 //rating index4
 
@@ -288,6 +292,8 @@ function result() {
 }
 
 const riepilogo = percentualeTotale(totale);
+if (document.location.pathname === "/index3.html") {
+
 
 const ctx = document.querySelector("#graficoTorta");
 let graficoCiambella = new Chart(ctx, {
@@ -304,10 +310,11 @@ let graficoCiambella = new Chart(ctx, {
         cutout: '70%',
     }
 });
-
-//Mostro il grafico in console
 console.log("Ecco il risultato del tuo test:");
 console.log(`Totale domande: ${riepilogo.scoreRisposte}`);
 console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
 console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
+
+}
+//Mostro il grafico in console
 
