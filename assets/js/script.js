@@ -190,6 +190,7 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
 
 }
 
+//Funzione per gestire lo score nella pagina dei risultati
 function result() {
     localStorage.setItem("score", score);
     localStorage.setItem("noScore", noScore);

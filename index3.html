@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Results Page</title>
     
 </head>
 <body>
@@ -19,14 +19,14 @@
         <section>
             <div>
                 <h4> Correct</h4>
-                <span class="score"></span><p> questions </p>
+                <span class="score"></span><span> questions </span>
             </div>
             <div>
     
             </div>
             <div>
                 <h4> Wrong </h4>
-                <span class="noScore"></span><p> questions </p>
+                <span class="noScore"></span><span> questions </span>
             </div>
     
             <form>
@@ -39,12 +39,12 @@
     </main>
      <script src="./assets/js/script.js"></script>
      <script>
-const score1 = localStorage.getItem("score");
-const noScore1 = localStorage.getItem("noScore");
-let result1 = document.querySelector(".score")
-result1.innerHTML = `${score1}/10`
-let result2 = document.querySelector(".noScore")
-result2.innerHTML = `${noScore1}/10`
+        let score1 = localStorage.getItem("score");
+        let noScore1 = localStorage.getItem("noScore");
+        let result1 = document.querySelector(".score")
+        result1.innerHTML = `${score1}/10`
+        let result2 = document.querySelector(".noScore")
+        result2.innerHTML = `${noScore1}/10`
 
       </script>                       
 

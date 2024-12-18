@@ -219,10 +219,6 @@ main section div h4 {
     font-weight: 400;
 }
 
-main section div p {
-    font-size: 20px;
-}
-
 /* PAGINA 4 */
 
 #main4 {
@@ -274,8 +270,8 @@ path.active {
     background-color: transparent;
     color: white;
     font-size: 1.2em;    
-    padding-left: 25em;
     width: 100%;
+    text-align: center;
     }
 
 #form4 button {
