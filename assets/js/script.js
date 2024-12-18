@@ -244,13 +244,6 @@ function updateQuestionCount() {
     questionCountEl.textContent = "QUESTION " + (currentQuestionIndex + 1);
 }
 
-
-// Carica la prima domanda all'avvio
-
-
-
-
-
 //rating index4
 
 const stars = document.querySelectorAll(".stars svg path");
@@ -261,8 +254,19 @@ stars.forEach((star, index1) => {
             index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
         })
     })
-})
-// Carica la prima domanda all'avvio
+    star.addEventListener("mouseover", () => {
+        stars.forEach((star, index2) => {
+            index1 >= index2 ? star.classList.add("hover") : star.classList.remove("hover");
+        })
+    });
+    star.addEventListener("mouseout", () => {
+        stars.forEach((star) => {
+            star.classList.remove("hover");
+        });
+    });
+});
+
+
 const risposteEsatte = parseInt(localStorage.getItem("score"))
 const risposteErrate = parseInt(localStorage.getItem("noScore"))
 let totale = risposteEsatte + risposteErrate;
