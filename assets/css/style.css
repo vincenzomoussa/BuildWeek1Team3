@@ -98,6 +98,7 @@ a {
     text-align: center;
     width: 80%;
     margin: 2em auto;
+    height: 3em;
 }
 
 #domanda h3 {
@@ -109,9 +110,10 @@ section {
     margin: auto;
     width: 100%;
     text-align: center;
+    height: 20em;
 }
 section div {
-    padding-bottom: 2em;    
+    margin-top: 2em;    
 }
 
 section button {
@@ -130,8 +132,7 @@ section button {
 }
 
 section  button:hover {
-    background-image: linear-gradient(#D20094, #900080);
-    
+    background-image: linear-gradient(#D20094, #900080);    
 }
 
 #question {
@@ -149,7 +150,6 @@ section  button:hover {
     letter-spacing: 0.2em;
     font-weight: bold;
     color: #d20094;
-
 }
 
 
