@@ -364,7 +364,7 @@ console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
 console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
 
 
-if(riepilogo.percentualeEsatte >= 60) {
+/* if(riepilogo.percentualeEsatte >= 60) {
     document.getElementById("primaFrase").innerText = "Congratulations!";
     document.getElementById("secondaFrase").innerText = "You passed the exam.";
     document.getElementById("terzaFrase").innerText = "We'll send you the certificate in a few minutes.";
@@ -374,7 +374,7 @@ if(riepilogo.percentualeEsatte >= 60) {
     document.getElementById("secondaFrase").innerText = "You didn't pass the exam.";
     document.getElementById("terzaFrase").innerText = "You can contact your teacher and ask him how to try this again.";
     document.getElementById("quartaFrase").innerText = "ps: don't worry though! It can only get better from here!";
-};
+}; */
 }
 //Mostro il grafico in console
 
