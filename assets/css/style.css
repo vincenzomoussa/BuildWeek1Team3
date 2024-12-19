@@ -6,7 +6,7 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white; 
+    color: white;
     margin: 3.5em 6em;
     font-family: "Inter", serif;
     font-weight: 300;
@@ -24,14 +24,14 @@ main h1 {
     line-height: 0.8;
 }
 
-main h3{
+main h3 {
     color: #d20094;
     font-family: "Outfit", sans-serif;
     font-size: 25px;
     margin-bottom: 0;
 }
 
-p{    
+p {
     margin-top: 0.3em;
     margin-bottom: 2.5em;
 }
@@ -43,26 +43,27 @@ ul {
     margin-bottom: 8em;
 }
 
-
-input[type="checkbox"] { 
+input[type="checkbox"] {
     appearance: none;
-    width: 20px; 
-    height: 20px; 
-    background: transparent;  
-    border-radius: 3px; 
-    cursor: pointer; 
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
     display: inline-block;
     margin-right: 1em;
     border: solid 2px white;
-    
+
 }
 
-input[type="checkbox"]:checked { 
+input[type="checkbox"]:checked {
     appearance: auto;
 }
 
-footer input, span, button{
-    vertical-align:middle;
+footer input,
+span,
+button {
+    vertical-align: middle;
 }
 
 form span {
@@ -106,14 +107,15 @@ a {
 }
 
 section {
-    display: inline-block;   
+    display: inline-block;
     margin: auto;
     width: 100%;
     text-align: center;
     height: 20em;
 }
+
 section div {
-    margin-top: 2em;    
+    margin-top: 2em;
 }
 
 #div1 button, #div2 button {
@@ -122,8 +124,8 @@ section div {
     width: 250px;
     border-radius: 3em;
     background:
-      linear-gradient(170deg, rgba(46, 46, 94, 0.8) 2%,rgba(46, 46, 94, 0.5)20%, rgba(46, 46, 94, 0.1)) padding-box,
-      linear-gradient(170deg, #FFFEFE 2%, rgba(255, 255, 255, 0.5) 4%, transparent) border-box;
+        linear-gradient(170deg, rgba(46, 46, 94, 0.8) 2%, rgba(46, 46, 94, 0.5)20%, rgba(46, 46, 94, 0.1)) padding-box,
+        linear-gradient(170deg, #FFFEFE 2%, rgba(255, 255, 255, 0.5) 4%, transparent) border-box;
     border: 3px solid transparent;
     font-family: "Outfit", sans-serif;
     font-weight: 600;
@@ -153,23 +155,12 @@ section div {
 }
 
 
-.timer {
-    font-size: 12px;
-    float: right;
-    text-align: center;
-}
-
-#time {
-    display: block;
-    font-family: "Outfit", sans-serif;
-    font-size: 32px;
-    font-weight: 600
-}
 
 /* PAGINA 3 */
 
 
 #bottone3{
+    margin: auto;
     margin-top: 1em;
     padding: 0.6em;
     width: 11em;
@@ -226,7 +217,7 @@ CANVAS #graficoTorta {
 
 .percentuale, .percentuale1 {
     font-size: 45px;
-    font-weight:600;
+    font-weight: 600;
     margin: auto;
 }
 
@@ -240,7 +231,8 @@ CANVAS #graficoTorta {
 #title4 {
     width: 100%;
     text-align: center;
-} 
+}
+
 h2 {
     margin-top: 2.5em;
     font-family: "Outfit", sans-serif;
@@ -251,10 +243,12 @@ h2 {
 .stars {
     text-align: center;
 }
+
 div svg {
     padding-left: 1em;
-    background-color: transparent;    
+    background-color: transparent;
 }
+
 .stars svg path {
     cursor: pointer;
     transition: color 0.2s ease;
@@ -263,6 +257,7 @@ div svg {
 path.active {
     fill: #00FFFF;
 }
+
 path.hover {
     fill: #00FFFF;
 }
@@ -271,27 +266,105 @@ path.hover {
     text-align: center;
     margin-top: 5em;
 }
-#footer4 form {
-    margin-top: 6em;
+#footer4 p {
+    font-size: 20px;
+    margin: auto;
 }
-#footer4 form input {
-    display: block;    
-    height: 3em;
+
+#footer4 form {
+    margin-top: 1em;
+}
+
+#footer4 form input {  
+    height: 2.2em;
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 1.2em;    
-    width: 100%;
-    text-align:left;
+    font-size: 0.9em;
+    text-align: left;
     width: 55%;
+    padding-left: 4em;
     margin: auto;
     }
 
 #footer4 button {
+    margin: auto;
     margin-top: 3em;    
 }
-form div {
+
+#footer4 form div {
     border-top: solid #D20094;
-    width: 58%;
+    width: 53%;
     margin: auto;
+}
+
+/* timer tondo */
+.countdown-container {
+    font-size: 8px;
+    float: right;
+    text-align: center;
+
+}
+
+
+.countdown {
+
+    position: relative;
+    width: 60px;
+    height: 100px;
+
+}
+
+.circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 10px solid lightgray;
+    border-top: 10px solid #3498db;
+    animation: countdown-animation 15s linear forwards;
+    margin: 0 auto;
+    position: relative;
+
+
+}
+
+@keyframes countdown-animation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+#time {
+
+    position: absolute;
+    top: 1.6em;
+    left: 1.7em;                                 /*secondi del timer */
+    transform: translate(-50%, -50%);
+    font-size: 3.1em;
+
+
+}
+
+.timer-text {
+    font-size: 1em;                        /*allineamento testo superiore e inferiore */
+    position: absolute;
+    width: 50%;
+    text-align: center;
+}
+
+#timer-above {
+    top: 2.2em;                  /*testo superiore*/
+    left: 2.8em;
+}
+
+#timer-below {
+    top: 6.4em;                  /*testo inferiore*/
+    left: 2.5em;
 }
