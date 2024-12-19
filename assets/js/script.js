@@ -114,6 +114,12 @@ const timerEl = document.querySelector('#time');
 const questionCountEl = document.querySelector('#question');
 const options = [];
 
+//Button per le risposte
+        let btn1 = document.createElement("button");
+        let btn2 = document.createElement("button");
+        let btn3 = document.createElement("button");
+        let btn4 = document.createElement("button");
+
 //Funzione per far accettare obbligatoriamente Termini e Condizioni
 function page1() {
 
@@ -191,17 +197,11 @@ function loadQuestion() {
     allAnswers.splice(Math.floor(Math.random() * (allAnswers.length + 1)), 0, currentQuestion.correct_answer);
 
     if (allAnswers.length === 2) {
-        let btn1 = document.createElement("button");
-        let btn2 = document.createElement("button");
         div1.appendChild(btn1);
         div1.appendChild(btn2);
         section.appendChild(div1);
         options.push(btn1, btn2);
     } else if (allAnswers.length === 4) {
-        let btn1 = document.createElement("button");
-        let btn2 = document.createElement("button");
-        let btn3 = document.createElement("button");
-        let btn4 = document.createElement("button");
         div1.appendChild(btn1);
         div1.appendChild(btn2);
         div2.appendChild(btn3);
