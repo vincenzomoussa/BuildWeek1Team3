@@ -131,11 +131,11 @@ function page1() {
             alert('Devi accettare Termini e Condizioni');
         } else {
             event.preventDefault()
-            window.location.href = "./index2.html";
+            window.location.href = "./Benchmark.html";
         }
     });
 }
-if (document.location.pathname === "/index.html") {
+if (document.location.pathname === "/WelcomePage.html") {
     page1()
 }
 //Funzione per il bottone di index3 
@@ -143,12 +143,12 @@ function page3() {
     const button2 = document.querySelector("#bottone3")
     button2.addEventListener('click', (event) => {
         event.preventDefault()
-        window.location.href = "./index4.html";
+        window.location.href = "./Feedback.html";
     }
     )
 }
 
-if (document.location.pathname === "/index3.html") {
+if (document.location.pathname === "/Score.html") {
     page3()
 }
 //Funzione per il bottone di index4
@@ -162,7 +162,7 @@ function page4() {
     )
 }
 
-if (document.location.pathname === "/index4.html") {
+if (document.location.pathname === "/Feedback.html") {
     page4()
 }
 
@@ -306,7 +306,7 @@ function updateQuestionCount() {
     questionCountEl.textContent = "QUESTION " + (currentQuestionIndex + 1);
 }
 //genero le domande casuali
-if (document.location.pathname === "/index2.html") {
+if (document.location.pathname === "/Benchmark.html") {
     loadQuestion();
 
 }
@@ -358,12 +358,12 @@ function result() {
     localStorage.setItem("score", score);
     localStorage.setItem("noScore", noScore);
 
-    window.location.href = "./index3.html"
+    window.location.href = "./Score.html"
 
 }
 
 const riepilogo = percentualeTotale(totale);
-if (document.location.pathname === "/index3.html") {
+if (document.location.pathname === "/Score.html") {
 
 
     const ctx = document.querySelector("#graficoTorta");
