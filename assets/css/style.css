@@ -271,10 +271,10 @@ path.hover {
     text-align: center;
     margin-top: 5em;
 }
-#form4 {
+#footer4 form {
     margin-top: 6em;
 }
-#form4 input {
+#footer4 form input {
     display: block;    
     height: 3em;
     border: none;
@@ -287,7 +287,7 @@ path.hover {
     margin: auto;
     }
 
-#form4 button {
+#footer4 button {
     margin-top: 3em;    
 }
 form div {
