@@ -115,10 +115,10 @@ const questionCountEl = document.querySelector('#question');
 const options = [];
 
 //Button per le risposte
-        let btn1 = document.createElement("button");
-        let btn2 = document.createElement("button");
-        let btn3 = document.createElement("button");
-        let btn4 = document.createElement("button");
+let btn1 = document.createElement("button");
+let btn2 = document.createElement("button");
+let btn3 = document.createElement("button");
+let btn4 = document.createElement("button");
 
 //Funzione per far accettare obbligatoriamente Termini e Condizioni
 function page1() {
@@ -128,14 +128,14 @@ function page1() {
 
     button.addEventListener('click', (event) => {
         if (!checkbox.checked) {
-           alert('Devi accettare Termini e Condizioni');
+            alert('Devi accettare Termini e Condizioni');
         } else {
             event.preventDefault()
             window.location.href = "./index2.html";
-        }  
+        }
     });
 }
-if(document.location.pathname === "/index.html") {
+if (document.location.pathname === "/index.html") {
     page1()
 }
 //Funzione per il bottone di index3 
@@ -145,11 +145,12 @@ function page3() {
         event.preventDefault()
         window.location.href = "./index4.html";
     }
-)}
+    )
+}
 
-if(document.location.pathname === "/index3.html") {
-        page3()
-    }
+if (document.location.pathname === "/index3.html") {
+    page3()
+}
 //Funzione per il bottone di index4
 
 function page4() {
@@ -158,11 +159,12 @@ function page4() {
         event.preventDefault()
         window.location.href = "https://epicode.com/it/?utm_source=adwords&utm_campaign=Brand&utm_adgroup=brandphrase&utm_term=epicode&utm_medium=ppc&hsa_acc=1246633295&hsa_cam=11897141170&hsa_grp=115607542316&hsa_ad=639941754622&hsa_src=g&hsa_tgt=kwd-1083842420783&hsa_kw=epicode&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiA34S7BhAtEiwACZzv4UfJd98I-u7uRZliuXsVMj--n4Cyblftux0gS-riLEmufJutDWyTehoCc6IQAvD_BwE";
     }
-)}
+    )
+}
 
-if(document.location.pathname === "/index4.html") {
-        page4()
-    }
+if (document.location.pathname === "/index4.html") {
+    page4()
+}
 
 
 
@@ -248,6 +250,8 @@ function nextQuestion() {
     }
 }
 
+
+
 // Funzione per avviare il timer
 function startTimer() {
     loadQuestion();
@@ -263,12 +267,14 @@ function startTimer() {
             selectAnswer(null, null, 'none'); // Passa alla prossima domanda se il tempo scade e se non viene data una risposta
         }
     }, 1000);
+    restartAnimation();                    /*funzione per avviare l'animazione del timer ad ogni domanda */
 }
 
 
 // Funzione per fermare il timer
 function stopTimer() {
     clearInterval(timerInterval);
+
 }
 
 // Funzione per resettare il timer
@@ -278,15 +284,27 @@ function resetTimer() {
     document.getElementById('time').textContent = time;
 }
 
+// Funzione per riavviare l'animazione del timer
+function restartAnimation() {
+    const timerProgress = document.querySelector('.circle');
+    timerProgress.style.animation = 'none';
+    timerProgress.offsetHeight;  /* forzo il riavvio dell'animazione*/
+    timerProgress.style.animation = '';
+    timerProgress.style.animation = 'countdown-animation 15s linear forwards';
+ }
+
 
 // Funzione per aggiornare il contatore delle domande
 function updateQuestionCount() {
     questionCountEl.textContent = "QUESTION " + (currentQuestionIndex + 1);
 }
 //genero le domande casuali
-if(document.location.pathname === "/index2.html") {
-loadQuestion();
+if (document.location.pathname === "/index2.html") {
+    loadQuestion();
+
 }
+
+
 
 //rating index4
 
@@ -314,27 +332,27 @@ stars.forEach((star, index1) => {
 const risposteEsatte = parseInt(localStorage.getItem("score"))
 const risposteErrate = parseInt(localStorage.getItem("noScore"))
 let totale = risposteEsatte + risposteErrate;
-let percentualeTotale = function() {
+let percentualeTotale = function () {
     const percentualeEsatte = (risposteEsatte / totale) * 100;
     const percentualeErrate = (risposteErrate / totale) * 100;
-    localStorage.setItem("percentualeEsatte",percentualeEsatte)
-    localStorage.setItem("percentualeErrate",percentualeErrate)
+    localStorage.setItem("percentualeEsatte", percentualeEsatte)
+    localStorage.setItem("percentualeErrate", percentualeErrate)
 
-const riepilogo = {
-    scoreRisposte: totale,
-    esatte: risposteEsatte,
-    errate: risposteErrate,
-    percentualeEsatte: percentualeEsatte.toFixed(1),
-    percentualeErrate: percentualeErrate.toFixed(1)
-}
-    return riepilogo 
+    const riepilogo = {
+        scoreRisposte: totale,
+        esatte: risposteEsatte,
+        errate: risposteErrate,
+        percentualeEsatte: percentualeEsatte.toFixed(1),
+        percentualeErrate: percentualeErrate.toFixed(1)
+    }
+    return riepilogo
 };
 
 //Funzione per gestire lo score nella pagina dei risultati
 function result() {
     localStorage.setItem("score", score);
     localStorage.setItem("noScore", noScore);
-  
+
     window.location.href = "./index3.html"
 
 }
@@ -343,38 +361,38 @@ const riepilogo = percentualeTotale(totale);
 if (document.location.pathname === "/index3.html") {
 
 
-const ctx = document.querySelector("#graficoTorta");
-let graficoCiambella = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        datasets: [{
-            label: 'answers',
-            data: [riepilogo.percentualeErrate, riepilogo.percentualeEsatte],
-            borderWidth: 0,
-            backgroundColor: ["#C2128D", "#00FFFF"]
-        }]
-    },
-    options: {
-        cutout: '70%',
-    }
-});
-console.log("Ecco il risultato del tuo test:");
-console.log(`Totale domande: ${riepilogo.scoreRisposte}`);
-console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
-console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);  
+    const ctx = document.querySelector("#graficoTorta");
+    let graficoCiambella = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                label: 'answers',
+                data: [riepilogo.percentualeErrate, riepilogo.percentualeEsatte],
+                borderWidth: 0,
+                backgroundColor: ["#C2128D", "#00FFFF"]
+            }]
+        },
+        options: {
+            cutout: '70%',
+        }
+    });
+    console.log("Ecco il risultato del tuo test:");
+    console.log(`Totale domande: ${riepilogo.scoreRisposte}`);
+    console.log(`Esatte: ${riepilogo.esatte} (${riepilogo.percentualeEsatte}%)`);
+    console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);
 
 
-/* if(riepilogo.percentualeEsatte >= 60) {
-    document.getElementById("primaFrase").innerText = "Congratulations!";
-    document.getElementById("secondaFrase").innerText = "You passed the exam.";
-    document.getElementById("terzaFrase").innerText = "We'll send you the certificate in a few minutes.";
-    document.getElementById("quartaFrase").innerText = "Check your email (including promotions / spam folder)";
-} else {
-    document.getElementById("primaFrase").innerText = "We're sorry!";
-    document.getElementById("secondaFrase").innerText = "You didn't pass the exam.";
-    document.getElementById("terzaFrase").innerText = "You can contact your teacher and ask him how to try this again.";
-    document.getElementById("quartaFrase").innerText = "ps: don't worry though! It can only get better from here!";
-}; */
+    /* if(riepilogo.percentualeEsatte >= 60) {
+        document.getElementById("primaFrase").innerText = "Congratulations!";
+        document.getElementById("secondaFrase").innerText = "You passed the exam.";
+        document.getElementById("terzaFrase").innerText = "We'll send you the certificate in a few minutes.";
+        document.getElementById("quartaFrase").innerText = "Check your email (including promotions / spam folder)";
+    } else {
+        document.getElementById("primaFrase").innerText = "We're sorry!";
+        document.getElementById("secondaFrase").innerText = "You didn't pass the exam.";
+        document.getElementById("terzaFrase").innerText = "You can contact your teacher and ask him how to try this again.";
+        document.getElementById("quartaFrase").innerText = "ps: don't worry though! It can only get better from here!";
+    }; */
 }
 //Mostro il grafico in console
 
