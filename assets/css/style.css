@@ -286,14 +286,9 @@ path.hover {
     width: 55%;
     margin: auto;
     }
-#form4 input:focus {
-    outline: none;
-}
 
 #form4 button {
-    display: block;    
-    margin: auto;
-    margin-top: 4em;    
+    margin-top: 3em;    
 }
 form div {
     border-top: solid #D20094;
