@@ -159,7 +159,7 @@ section div {
 /* PAGINA 3 */
 #bottone3{
     margin: auto;
-    margin-top: 1em;
+    margin-top: 2.5em;
     padding: 0.6em;
     width: 11em;
     background: none;
@@ -178,7 +178,7 @@ section div {
 
 div p {
     font-family: "Outfit", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     margin-bottom: 1.5em;
 }
@@ -246,6 +246,12 @@ CANVAS #graficoTorta {
     display: inline-block;
 }
 
+#prova {
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
 #esitoGraficoTorta {
     height: 10%;
     position: absolute;
@@ -255,32 +261,23 @@ CANVAS #graficoTorta {
     text-align: center;
 }
 
-#esitoGraficoTorta p {
-    font-size: 100%;
-}
-
-#prova {
-    width: 50%;
-    margin: auto;
-    box-sizing: border-box;
-}
-
 #esitoGraficoTorta :nth-child(1) {
     font-weight: bold;
-    font-size: 120%;
-    margin: 0;
-    margin-top: 1em;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 1.3em;
 }
 
 #esitoGraficoTorta :nth-child(2) {
-    font-size: 120%;
+    font-size: 18px;
     color: #00FFFF;
     font-weight: bold;
-    margin: 0;
+    margin: auto;
 }
 
 #esitoGraficoTorta :nth-child(3){
-    margin-top: 2.5em;
+    font-size: 14px;
+    margin-top: 1.7em;
 }
 
 /* PAGINA 4 */
