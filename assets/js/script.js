@@ -217,7 +217,7 @@ function loadQuestion() {
     options.forEach((button, index) => {
         if (allAnswers[index]) {
             button.textContent = allAnswers[index];
-            button.style.backgroundColor = ''; // Reset colore
+            button.style.backgroundColor = ''; // Reset colore per feedback
             button.onclick = () => selectAnswer(allAnswers[index], currentQuestion.correct_answer, currentQuestion.type);
 
         }
@@ -232,13 +232,12 @@ function loadQuestion() {
 function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
 
-    // Trovo e coloro la risposta corretta in verde
+    //Feedback utente
     options.forEach(button => {
         if (button.textContent === correctAnswer) {
             button.style.backgroundColor = 'green'; // Evidenzia la risposta corretta in verde
        } else if (button.textContent === selectedAnswer && selectedAnswer !== correctAnswer) {
          button.style.backgroundColor = 'red'; // Evidenzia la risposta sbagliata in rosso
-        //}
        
     }})
 
