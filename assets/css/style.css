@@ -236,6 +236,7 @@ CANVAS #graficoTorta {
     float: right;
     line-height: 1.1;
     font-family: "Outfit", sans-serif;
+    width: 30%;
 }
 
 #esatto {
@@ -244,6 +245,7 @@ CANVAS #graficoTorta {
     float: left;
     line-height: 1.1;
     font-family: "Outfit", sans-serif;
+    width: 30%;
 }
 
 #esatto span, #errato span {
