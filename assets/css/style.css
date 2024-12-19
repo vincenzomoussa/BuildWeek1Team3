@@ -223,15 +223,13 @@ CANVAS #graficoTorta {
 #errato {
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
-    text-align: right;
+    float: right;
 }
 
 #esatto {
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
-    text-align: left;
+    float: left;
 }
 
 #contenitoreRisultati {
@@ -244,13 +242,10 @@ CANVAS #graficoTorta {
 
 #contenitoreGrafico {
     width: 30%;
-    width: 30%;
-    min-width: 20vw;
     min-width: 20vw;
     position: relative;
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
 }
 
 #esitoGraficoTorta {
@@ -263,25 +258,24 @@ CANVAS #graficoTorta {
 }
 
 #esitoGraficoTorta p {
-    font-size: 90%;
+    font-size: 100%;
 }
     
 #prova {
-    width: 70%;
+    width: 50%;
     margin: auto;
     box-sizing: border-box;
-    text-align: center;
 }
 
 #esitoGraficoTorta :nth-child(1) {
     font-weight: bold;
-    font-size: 110%;
+    font-size: 120%;
     margin: 0;
     margin-top: 1em;
 }
 
 #esitoGraficoTorta :nth-child(2) {
-    font-size: 110%;
+    font-size: 120%;
     color: #00FFFF;
     font-weight: bold;
     margin: 0;
