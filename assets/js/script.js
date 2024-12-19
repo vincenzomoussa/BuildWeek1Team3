@@ -290,7 +290,7 @@ function restartAnimation() {
     timerProgress.style.animation = 'none';
     timerProgress.offsetHeight;  /* forzo il riavvio dell'animazione*/
     timerProgress.style.animation = '';
-    timerProgress.style.animation = 'countdown-animation 15s linear forwards';
+    timerProgress.style.animation = 'countdown-animation 60s linear forwards';
  }
 
 
