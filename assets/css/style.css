@@ -100,6 +100,11 @@ a {
     width: 80%;
     margin: 2em auto;
     height: 3em;
+    font-weight: bold;
+}
+
+#domanda::first-line {
+    font-weight: normal;
 }
 
 #domanda h3 {
@@ -172,14 +177,14 @@ section div {
 #bottone3{
     margin: auto;
     margin-top: 2.5em;
-    padding: 1em 2em;
+    padding: 0.7em 3.3em;
     text-align: center;
     background: none;
     border: 3px solid white;
     color: white;
     font-family: "Outfit", sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -252,7 +257,7 @@ CANVAS #graficoTorta {
     font-size: 20px;
     font-weight: 200;
     display: inline-block;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
 }
 .score, .noScore {
     margin-right: 0.2em;
