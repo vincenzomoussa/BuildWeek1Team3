@@ -173,7 +173,8 @@ if (document.location.pathname === "/index4.html") {
 // Funzione per caricare una domanda casuale che non sia già stata usata
 function loadQuestion() {
     if (usedQuestions.length === questions.length) {      //se le due lunghezze coincidono tutte le domande sono state caricate
-        return;
+            
+        selectAnswer();
     }
 
     let randomIndex;
@@ -197,6 +198,7 @@ function loadQuestion() {
     // Imposto le opzioni di risposta
     const allAnswers = [...currentQuestion.incorrect_answers];
     allAnswers.splice(Math.floor(Math.random() * (allAnswers.length + 1)), 0, currentQuestion.correct_answer);
+    
 
     if (allAnswers.length === 2) {
         div1.appendChild(btn1);
@@ -215,42 +217,51 @@ function loadQuestion() {
     options.forEach((button, index) => {
         if (allAnswers[index]) {
             button.textContent = allAnswers[index];
+            button.style.backgroundColor = ''; // Reset colore
             button.onclick = () => selectAnswer(allAnswers[index], currentQuestion.correct_answer, currentQuestion.type);
+
         }
     });
     // Aggiorno il contatore delle domande e avvio il timer
     updateQuestionCount();
     resetTimer();
     startTimer();
-
-
+    
 }
-
-
-
 // Funzione per gestire la selezione della risposta
 function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
+
+    // Trovo e coloro la risposta corretta in verde
+    options.forEach(button => {
+        if (button.textContent === correctAnswer) {
+            button.style.backgroundColor = 'green'; // Evidenzia la risposta corretta in verde
+       } else if (button.textContent === selectedAnswer && selectedAnswer !== correctAnswer) {
+         button.style.backgroundColor = 'red'; // Evidenzia la risposta sbagliata in rosso
+        //}
+       
+    }})
+
+    // Aggiorno il punteggio
     if (selectedAnswer === correctAnswer) {
         score++;
-    } else if (selectAnswer !== correctAnswer) {
+    } else {
         noScore++;
     }
-    nextQuestion();
 
+    // Attendo un momento prima di passare alla domanda successiva
+    setTimeout(nextQuestion, 500);
+  
 }
-
 // Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
-        loadQuestion();
+        loadQuestion()
     } else {
         result()
     }
 }
-
-
 
 // Funzione per avviare il timer
 function startTimer() {
@@ -270,7 +281,6 @@ function startTimer() {
     restartAnimation();                    /*funzione per avviare l'animazione del timer ad ogni domanda */
 }
 
-
 // Funzione per fermare il timer
 function stopTimer() {
     clearInterval(timerInterval);
@@ -283,7 +293,6 @@ function resetTimer() {
     time = 60;
     document.getElementById('time').textContent = time;
 }
-
 // Funzione per riavviare l'animazione del timer
 function restartAnimation() {
     const timerProgress = document.querySelector('.circle');
@@ -292,7 +301,6 @@ function restartAnimation() {
     timerProgress.style.animation = '';
     timerProgress.style.animation = 'countdown-animation 15s linear forwards';
  }
-
 
 // Funzione per aggiornare il contatore delle domande
 function updateQuestionCount() {
@@ -303,8 +311,6 @@ if (document.location.pathname === "/index2.html") {
     loadQuestion();
 
 }
-
-
 
 //rating index4
 
