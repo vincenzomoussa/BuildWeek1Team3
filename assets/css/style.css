@@ -346,6 +346,7 @@ path.hover {
     width: 55%;
     padding-left: 4em;
     margin: auto;
+    outline: none;
     }
 
 #footer4 button {
