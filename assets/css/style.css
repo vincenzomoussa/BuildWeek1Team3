@@ -6,7 +6,7 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white; 
+    color: white;
     margin: 3.5em 6em;
     font-family: "Inter", serif;
     font-weight: 300;
@@ -24,14 +24,14 @@ main h1 {
     line-height: 0.8;
 }
 
-main h3{
+main h3 {
     color: #d20094;
     font-family: "Outfit", sans-serif;
     font-size: 25px;
     margin-bottom: 0;
 }
 
-p{    
+p {
     margin-top: 0.3em;
     margin-bottom: 2.5em;
 }
@@ -42,30 +42,32 @@ ul {
     line-height: 1.5;
     margin-bottom: 8em;
 }
-   
+
 form button {
     margin-left: 13rem;
 }
 
-input[type="checkbox"] { 
+input[type="checkbox"] {
     appearance: none;
-    width: 20px; 
-    height: 20px; 
-    background: transparent;  
-    border-radius: 3px; 
-    cursor: pointer; 
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
     display: inline-block;
     margin-right: 1em;
     border: solid 2px white;
-    
+
 }
 
-input[type="checkbox"]:checked { 
+input[type="checkbox"]:checked {
     appearance: auto;
 }
 
-footer input, span, button{
-    vertical-align:middle;
+footer input,
+span,
+button {
+    vertical-align: middle;
 }
 
 form span {
@@ -79,7 +81,7 @@ form span {
     color: #0B113B;
     font-weight: bold;
     font-size: 16px;
-    box-shadow: 0px 0px 15px 2px rgba(0,255,255,0.86);
+    box-shadow: 0px 0px 15px 2px rgba(0, 255, 255, 0.86);
     border: none;
     font-family: "Outfit", sans-serif;
     cursor: pointer;
@@ -94,7 +96,7 @@ a {
 
 #domanda {
     font-family: "Outfit", sans-serif;
-    font-size: 45px;   
+    font-size: 45px;
     text-align: center;
     width: 80%;
     margin: 2em auto;
@@ -106,14 +108,15 @@ a {
 }
 
 section {
-    display: inline-block;   
+    display: inline-block;
     margin: auto;
     width: 100%;
     text-align: center;
     height: 20em;
 }
+
 section div {
-    margin-top: 2em;    
+    margin-top: 2em;
 }
 
 section button {
@@ -122,8 +125,8 @@ section button {
     width: 250px;
     border-radius: 3em;
     background:
-      linear-gradient(170deg, rgba(46, 46, 94, 0.8) 2%,rgba(46, 46, 94, 0.5)20%, rgba(46, 46, 94, 0.1)) padding-box,
-      linear-gradient(170deg, #FFFEFE 2%, rgba(255, 255, 255, 0.5) 4%, transparent) border-box;
+        linear-gradient(170deg, rgba(46, 46, 94, 0.8) 2%, rgba(46, 46, 94, 0.5)20%, rgba(46, 46, 94, 0.1)) padding-box,
+        linear-gradient(170deg, #FFFEFE 2%, rgba(255, 255, 255, 0.5) 4%, transparent) border-box;
     border: 3px solid transparent;
     font-family: "Outfit", sans-serif;
     font-weight: 600;
@@ -131,8 +134,8 @@ section button {
     cursor: pointer;
 }
 
-section  button:hover {
-    background-image: linear-gradient(#D20094, #900080);    
+section button:hover {
+    background-image: linear-gradient(#D20094, #900080);
 }
 
 #question {
@@ -153,17 +156,75 @@ section  button:hover {
 }
 
 
-.timer {
-    font-size: 12px;
+/* timer tondo */
+.countdown-container {
+    font-size: 8px;
     float: right;
+    text-align: center;
+
+}
+
+
+.countdown {
+
+    position: relative;
+    width: 60px;
+    height: 100px;
+
+}
+
+.circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 10px solid lightgray;
+    border-top: 10px solid #3498db;
+    animation: countdown-animation 15s linear forwards;
+    margin: 0 auto;
+    position: relative;
+
+
+}
+
+@keyframes countdown-animation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+#time {
+
+    position: absolute;
+    top: 1.6em;
+    left: 1.7em;                                 /*secondi del timer */
+    transform: translate(-50%, -50%);
+    font-size: 3.1em;
+
+
+}
+
+.timer-text {
+    font-size: 1em;                        /*allineamento testo superiore e inferiore */
+    position: absolute;
+    width: 50%;
     text-align: center;
 }
 
-#time {
-    display: block;
-    font-family: "Outfit", sans-serif;
-    font-size: 32px;
-    font-weight: 600
+#timer-above {
+    top: 2.2em;                  /*testo superiore*/
+    left: 2.8em;
+}
+
+#timer-below {
+    top: 6.4em;                  /*testo inferiore*/
+    left: 2.5em;
 }
 
 /* PAGINA 3 */
@@ -177,13 +238,13 @@ section  button:hover {
     cursor: pointer;
     margin: auto;
     margin-top: 2em;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     width: 10%;
     background: none;
 }
 
 
-.bottone a  {
+.bottone a {
     font-family: "Outfit", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -200,7 +261,7 @@ div p {
 div h3 {
     margin-top: 2em;
     font-family: "Outfit", sans-serif;
-    font-size: 50px; 
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -227,9 +288,10 @@ CANVAS #graficoTorta {
 }
 
 
-.percentuale, .percentuale1 {
+.percentuale,
+.percentuale1 {
     font-size: 45px;
-    font-weight:600;
+    font-weight: 600;
     margin: auto;
 }
 
@@ -243,13 +305,15 @@ CANVAS #graficoTorta {
 #title4 {
     width: 100%;
     text-align: center;
-} 
+}
+
 h2 {
     margin-top: 2.5em;
     font-family: "Outfit", sans-serif;
     font-size: 50px;
     margin-bottom: 0.2em;
 }
+
 .page4parag {
     font-size: 24px;
     margin-bottom: 1.5em;
@@ -258,10 +322,12 @@ h2 {
 .stars {
     text-align: center;
 }
+
 div svg {
     padding-left: 1em;
-    background-color: transparent;    
+    background-color: transparent;
 }
+
 .stars svg path {
     cursor: pointer;
     transition: color 0.2s ease;
@@ -270,6 +336,7 @@ div svg {
 path.active {
     fill: #00FFFF;
 }
+
 path.hover {
     fill: #00FFFF;
 }
@@ -278,30 +345,34 @@ path.hover {
     text-align: center;
     margin-top: 5em;
 }
+
 #form4 {
     margin-top: 6em;
 }
+
 #form4 input {
-    display: block;    
+    display: block;
     height: 3em;
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 1.2em;    
+    font-size: 1.2em;
     width: 100%;
-    text-align:left;
+    text-align: left;
     width: 55%;
     margin: auto;
-    }
+}
+
 #form4 input:focus {
     outline: none;
 }
 
 #form4 button {
-    display: block;    
+    display: block;
     margin: auto;
-    margin-top: 4em;    
+    margin-top: 4em;
 }
+
 form div {
     border-top: solid #D20094;
     width: 58%;
