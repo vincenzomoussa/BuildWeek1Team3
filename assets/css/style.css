@@ -157,8 +157,6 @@ section div {
 
 
 /* PAGINA 3 */
-
-
 #bottone3{
     margin: auto;
     margin-top: 1em;
@@ -174,7 +172,7 @@ section div {
 }
 
 #bottone3:hover {
-    background-image: linear-gradient(#D20094, #900080);    
+    background-image: linear-gradient(#D20094, #900080);
 } 
 
 
@@ -214,13 +212,76 @@ CANVAS #graficoTorta {
     margin: auto;
 }
 
-
 .percentuale, .percentuale1 {
     font-size: 45px;
     font-weight: 600;
     margin: auto;
 }
 
+#errato {
+    text-align: center;
+    display: inline-block;
+    float: right;
+}
+
+#esatto {
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+#contenitoreRisultati {
+    text-align: center;
+}
+
+#formBottone {
+    text-align: center; 
+}
+
+#contenitoreGrafico {
+    width: 30%;
+    min-width: 20vw;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+#esitoGraficoTorta {
+    height: 10%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#esitoGraficoTorta p {
+    font-size: 100%;
+}
+
+#prova {
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#esitoGraficoTorta :nth-child(1) {
+    font-weight: bold;
+    font-size: 120%;
+    margin: 0;
+    margin-top: 1em;
+}
+
+#esitoGraficoTorta :nth-child(2) {
+    font-size: 120%;
+    color: #00FFFF;
+    font-weight: bold;
+    margin: 0;
+}
+
+#esitoGraficoTorta :nth-child(3){
+    margin-top: 2.5em;
+}
 
 /* PAGINA 4 */
 
