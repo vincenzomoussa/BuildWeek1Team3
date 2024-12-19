@@ -114,6 +114,76 @@ section {
     height: 20em;
 }
 
+#errato {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#esatto {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+#contenitoreRisultati {
+    text-align: center;
+}
+
+#formBottone {
+    text-align: center;
+}
+#contenitoreGrafico {
+    width: 30%;
+    width: 30%;
+    min-width: 20vw;
+    min-width: 20vw;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#esitoGraficoTorta {
+    height: 10%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#esitoGraficoTorta p {
+    font-size: 90%;
+}
+    
+
+
+#prova {
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#esitoGraficoTorta :nth-child(1) {
+    font-weight: bold;
+    font-size: 110%;
+    margin: 0;
+    margin-top: 1em;
+}
+
+#esitoGraficoTorta :nth-child(2) {
+    font-size: 110%;
+    color: #00FFFF;
+    font-weight: bold;
+    margin: 0;
+}
+#esitoGraficoTorta :nth-child(3){
+    margin-top: 2.5em;
+}
+
+
 section div {
     margin-top: 2em;
 }

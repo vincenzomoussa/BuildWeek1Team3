@@ -382,17 +382,15 @@ if (document.location.pathname === "/index3.html") {
     console.log(`Errate: ${riepilogo.errate} (${riepilogo.percentualeErrate}%)`);
 
 
-    /* if(riepilogo.percentualeEsatte >= 60) {
+    if(riepilogo.percentualeEsatte >= 60) {
         document.getElementById("primaFrase").innerText = "Congratulations!";
         document.getElementById("secondaFrase").innerText = "You passed the exam.";
-        document.getElementById("terzaFrase").innerText = "We'll send you the certificate in a few minutes.";
-        document.getElementById("quartaFrase").innerText = "Check your email (including promotions / spam folder)";
+        document.getElementById("terzaFrase").innerText = "We'll send you the certificate in a few minutes.Check your email (including promotions / spam folder)";
     } else {
         document.getElementById("primaFrase").innerText = "We're sorry!";
         document.getElementById("secondaFrase").innerText = "You didn't pass the exam.";
         document.getElementById("terzaFrase").innerText = "You can contact your teacher and ask him how to try this again.";
-        document.getElementById("quartaFrase").innerText = "ps: don't worry though! It can only get better from here!";
-    }; */
+    };
 }
 //Mostro il grafico in console
 
