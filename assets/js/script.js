@@ -142,12 +142,10 @@ const questions = [
       "type": "multiple",
       "difficulty": "easy",
       "category": "Science: Computers",
-      "question": "What is the most preferred image format used for logos in the Wikimedia database?",
-      "correct_answer": ".svg",
+      "question": "Is JavaScript case-sensitive?",
+      "correct_answer": "true",
       "incorrect_answers": [
-        ".png",
-        ".jpeg",
-        ".gif"
+        "false"
       ]
     },
     {
@@ -176,12 +174,12 @@ const questions = [
       "type": "multiple",
       "difficulty": "easy",
       "category": "Science: Computers",
-      "question": "On Twitter, what was the original character limit for a Tweet?",
-      "correct_answer": "140",
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "correct_answer": "<script>",
       "incorrect_answers": [
-        "120",
-        "160",
-        "100"
+        "<javascript>",
+        "<js>",
+        "<scripting>"
       ]
     },
     {
