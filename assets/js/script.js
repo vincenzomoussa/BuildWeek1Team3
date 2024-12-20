@@ -222,8 +222,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('numQuestions', numQuestions);
     });
 });
-
-
 // Array per tenere traccia delle domande visualizzate
 let usedQuestions = [];
 
@@ -294,10 +292,6 @@ function page4() {
 if (document.location.pathname === "/Feedback.html") {
     page4()
 }
-
-
-
-
 
 // Funzione per caricare una domanda casuale che non sia già stata usata
     function loadQuestion() {
