@@ -445,10 +445,11 @@ path.hover {
     height: 65px;
     border-radius: 50%;
     border: 10px solid lightgray;
-    border-top: 10px solid #3498db;
+    border-top: 10px solid #00e0e0;
     animation: countdown-animation 15s linear forwards;
     margin: 0 auto;
     position: relative;
+    box-shadow: 1px 1px 18px 0px rgba(0, 0, 0, 0.534);
 
 
 }
