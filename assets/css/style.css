@@ -138,9 +138,10 @@ section div {
     cursor: pointer;
 }
 
-#div1 button:hover, #div2 button:hover {
+#div1 button.hover-effect:hover, #div2 button.hover-effect:hover {
     background-image: linear-gradient(#D20094, #900080);    
 }
+ 
 
 #question {
     letter-spacing: 0.2em;

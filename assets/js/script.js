@@ -116,9 +116,13 @@ const options = [];
 
 //Button per le risposte
 let btn1 = document.createElement("button");
+btn1.classList.add('hover-effect')
 let btn2 = document.createElement("button");
+btn2.classList.add('hover-effect')
 let btn3 = document.createElement("button");
+btn3.classList.add('hover-effect')
 let btn4 = document.createElement("button");
+btn4.classList.add('hover-effect')
 
 //Funzione per far accettare obbligatoriamente Termini e Condizioni
 function page1() {
@@ -232,6 +236,12 @@ function loadQuestion() {
 function selectAnswer(selectedAnswer, correctAnswer, type) {
     stopTimer();
 
+    const buttons = document.querySelectorAll('button.hover-effect'); 
+    buttons.forEach(button => { 
+        button.classList.remove('hover-effect');
+        setTimeout(() => { button.classList.add('hover-effect'); }, 500)
+    });
+
     //Feedback utente
     options.forEach(button => {
         if (button.textContent === correctAnswer) {
@@ -240,6 +250,7 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
          button.style.backgroundColor = 'red'; // Evidenzia la risposta sbagliata in rosso
        
     }})
+
 
     // Aggiorno il punteggio
     if (selectedAnswer === correctAnswer) {
