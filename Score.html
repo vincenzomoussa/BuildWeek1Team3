@@ -49,21 +49,29 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script src="./assets/js/script.js"></script>
+     
      <script>
+        const numQuestions = parseInt(localStorage.getItem('numQuestions'), 10);
+       
         let score1 = localStorage.getItem("score");
         let noScore1 = localStorage.getItem("noScore");
         let result1 = document.querySelector(".score")
-        result1.innerHTML = `${score1}/10`
         let result2 = document.querySelector(".noScore")
-        result2.innerHTML = `${noScore1}/10`
         let resulPerc = localStorage.getItem("percentualeEsatte");
         let resultWrongPerc = localStorage.getItem("percentualeErrate");
         let resultPerc1 = document.querySelector(".percentuale")
         resultPerc1.innerHTML = `${resulPerc}%`
         let resultWrongPerc1 = document.querySelector(".percentuale1")
         resultWrongPerc1.innerHTML = `${resultWrongPerc}%`
-
+        if (numQuestions === 10) {
+            result1.innerHTML = `${score1}/10`
+            result2.innerHTML = `${noScore1}/10`
+        }else{
+            result1.innerHTML = `${score1}/20`
+            result2.innerHTML = `${noScore1}/20`
+        }
       </script>                       
+      
 
 
    
