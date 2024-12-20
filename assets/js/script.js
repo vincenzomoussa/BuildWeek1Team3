@@ -92,7 +92,121 @@ const questions = [
         correct_answer: "Java",
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
-];
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "Which computer hardware device provides an interface for all other connected devices to communicate?",
+      "correct_answer": "Motherboard",
+      "incorrect_answers": [
+        "Central Processing Unit",
+        "Hard Disk Drive",
+        "Random Access Memory"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "What does GHz stand for?",
+      "correct_answer": "Gigahertz",
+      "incorrect_answers": [
+        "Gigahotz",
+        "Gigahetz",
+        "Gigahatz"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "The Windows 7 operating system has six main editions.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "What is the domain name for the country Tuvalu?",
+      "correct_answer": ".tv",
+      "incorrect_answers": [
+        ".tu",
+        ".tt",
+        ".tl"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "What is the most preferred image format used for logos in the Wikimedia database?",
+      "correct_answer": ".svg",
+      "incorrect_answers": [
+        ".png",
+        ".jpeg",
+        ".gif"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "The Windows ME operating system was released in the year 2000.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "What does the computer software acronym JVM stand for?",
+      "correct_answer": "Java Virtual Machine",
+      "incorrect_answers": [
+        "Java Vendor Machine",
+        "Java Visual Machine",
+        "Just Virtual Machine"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "On Twitter, what was the original character limit for a Tweet?",
+      "correct_answer": "140",
+      "incorrect_answers": [
+        "120",
+        "160",
+        "100"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "How many kilobytes in one gigabyte (in decimal)?",
+      "correct_answer": "1000000",
+      "incorrect_answers": [
+        "1024",
+        "1000",
+        "1048576"
+      ]
+    }
+  ]
 
 // Inizializzo l'indice della domanda corrente, il tempo, il punteggio e l'intervallo del timer
 let currentQuestionIndex = 0;
@@ -100,6 +214,17 @@ let time = 60;
 let score = 0;
 let noScore = 0;
 let timerInterval;
+let totalQuestions = parseInt(localStorage.getItem('numQuestions')) || 10;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const numQuestionsSelect = document.querySelector('#num-questions');
+    numQuestionsSelect.addEventListener('change', function() {
+        const numQuestions = parseInt(numQuestionsSelect.value, 10);
+        // Salva il numero di domande selezionate nel localStorage
+        localStorage.setItem('numQuestions', numQuestions);
+    });
+});
+
 
 // Array per tenere traccia delle domande visualizzate
 let usedQuestions = [];
@@ -124,6 +249,7 @@ btn3.classList.add('hover-effect')
 let btn4 = document.createElement("button");
 btn4.classList.add('hover-effect')
 
+
 //Funzione per far accettare obbligatoriamente Termini e Condizioni
 function page1() {
 
@@ -132,10 +258,11 @@ function page1() {
 
     button.addEventListener('click', (event) => {
         if (!checkbox.checked) {
-            alert('Devi accettare Termini e Condizioni');
+            alert('Devi accettare Termini e Condizioni!');
         } else {
             event.preventDefault()
             window.location.href = "./Benchmark.html";
+            
         }
     });
 }
@@ -175,12 +302,13 @@ if (document.location.pathname === "/Feedback.html") {
 
 
 // Funzione per caricare una domanda casuale che non sia già stata usata
-function loadQuestion() {
-    if (usedQuestions.length === questions.length) {      //se le due lunghezze coincidono tutte le domande sono state caricate
-            
-        selectAnswer();
+    function loadQuestion() {
+        console.log('Loading a new question...');
+        console.log('Used Questions: ', usedQuestions);
+    if (usedQuestions.length === totalQuestions) { // Se tutte le domande sono state caricate, termina il quiz
+        finishQuiz();
+        return;
     }
-
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * questions.length);       //qui continuo a caricare un indice casuale che non è presente in usedqustion
@@ -251,7 +379,6 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
        
     }})
 
-
     // Aggiorno il punteggio
     if (selectedAnswer === correctAnswer) {
         score++;
@@ -263,16 +390,14 @@ function selectAnswer(selectedAnswer, correctAnswer, type) {
     setTimeout(nextQuestion, 500);
   
 }
-// Funzione per passare alla domanda successiva e per andare alla pagina dei risultati
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < 10) {
-        loadQuestion()
+    if (currentQuestionIndex < totalQuestions) {
+        loadQuestion();  // Carica la domanda successiva
     } else {
-        result()
+        finishQuiz();  // Se tutte le domande sono state completate, termina il quiz
     }
 }
-
 // Funzione per avviare il timer
 function startTimer() {
     loadQuestion();
@@ -320,6 +445,10 @@ function updateQuestionCount() {
 if (document.location.pathname === "/Benchmark.html") {
     loadQuestion();
 
+}
+
+function finishQuiz() {
+    result()
 }
 
 //rating index4
@@ -411,5 +540,6 @@ if (document.location.pathname === "/Score.html") {
 //Mostro il grafico in console
 
 //Mostro il risultato all'interno del grafico a torta
+
 
 
