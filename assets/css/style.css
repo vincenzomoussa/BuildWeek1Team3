@@ -125,6 +125,7 @@ section div {
 
 #div1 button, #div2 button {
     margin-right: 2em;
+    margin-left: 2em;
     padding: 1.5em;
     width: 250px;
     border-radius: 3em;
