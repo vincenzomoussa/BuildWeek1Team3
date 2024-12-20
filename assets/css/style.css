@@ -51,6 +51,8 @@ input[type="checkbox"] {
     border-radius: 3px;
     cursor: pointer;
     display: inline-block;
+    margin: auto;
+    margin-top: 2em;
     margin-right: 1em;
     border: solid 2px white;
 
@@ -60,16 +62,16 @@ input[type="checkbox"]:checked {
     appearance: auto;
 }
 
-footer input,
-span,
-button {
+footer input, span, button {
+    margin-top: 2em;
     vertical-align: middle;
 }
 
 form span {
+    display: inline-block;
     font-weight: bold;
     font-size: 14px;
-    margin-right: 10em;
+    margin-right: 15em;
 }
 
 .bottoni {
@@ -88,6 +90,28 @@ form span {
 a {
     text-decoration: none;
     color: #0B113B;
+}
+
+#num-questions {
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0.5em;
+    border: 2px solid white;
+}
+
+#num-questions:focus {
+    border-color: #D20094; 
+
+}
+
+#num-questions option {
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    color: #D20094; 
+    padding: 0.5em; 
 }
 
 
