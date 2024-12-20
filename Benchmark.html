@@ -35,10 +35,17 @@
         </div>
     </section>
     <footer class="footerCentrale">
-        <span id="question">QUESTION 1</span><span class="contatore"> / 10</span>
+        <span id="question">QUESTION 1</span><span class="contatore"></span>
     </footer>
     <script src="./assets/js/script.js"></script>
-    <script>const numQuestions = parseInt(localStorage.getItem('numQuestions'), 10);</script>
+    <script>const numQuestions = parseInt(localStorage.getItem('numQuestions'), 10);
+    let numero = document.querySelector(".contatore")
+        if (numQuestions === 10) {
+            numero.textContent = "/10"
+        }else{
+            numero.textContent = "/20"
+        }
+    </script>
 </body>
 
 </html>

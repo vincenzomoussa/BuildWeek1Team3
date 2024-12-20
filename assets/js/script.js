@@ -303,8 +303,6 @@ if (document.location.pathname === "/Feedback.html") {
 
 // Funzione per caricare una domanda casuale che non sia già stata usata
     function loadQuestion() {
-        console.log('Loading a new question...');
-        console.log('Used Questions: ', usedQuestions);
     if (usedQuestions.length === totalQuestions) { // Se tutte le domande sono state caricate, termina il quiz
         finishQuiz();
         return;
@@ -441,6 +439,7 @@ function restartAnimation() {
 function updateQuestionCount() {
     questionCountEl.textContent = "QUESTION " + (currentQuestionIndex + 1);
 }
+
 //genero le domande casuali
 if (document.location.pathname === "/Benchmark.html") {
     loadQuestion();
