@@ -214,6 +214,8 @@ let noScore = 0;
 let timerInterval;
 let totalQuestions = parseInt(localStorage.getItem('numQuestions')) || 10;
 
+
+//Gestiamo il cambio di difficoltà
 document.addEventListener('DOMContentLoaded', function() {
     const numQuestionsSelect = document.querySelector('#num-questions');
     numQuestionsSelect.addEventListener('change', function() {
